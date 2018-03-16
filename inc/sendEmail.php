@@ -46,11 +46,11 @@ if($_POST) {
 
     if (!$error) {
 
-    //    ini_set("sendmail_from", $siteOwnersEmail); // for windows server
+        ini_set("sendmail_from", $siteOwnersEmail); // for windows server
         $mail = mail($siteOwnersEmail, $subject, $message, $headers);
 
         if ($mail) { echo "OK"; }
-        else { echo "Something went wrong. Please try again."; }
+        else { echo "OOpsss"; }
         
     } # end if - no validation error
 
