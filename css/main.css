@@ -1076,9 +1076,20 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .stats-tabs li {
     display: inline-block;
-    margin: 0 1.5rem 3rem 0;
+    margin: 0 7rem 3rem 0;
     padding: 0 1.5rem 0 0;
-    border-right: 1px solid rgba(13, 10, 11, 0.15);
+    font-size: 2rem;
+    /*border-right: 1px solid rgba(13, 10, 11, 0.15);*/
+}
+
+@media only screen and (max-width: 600px) {
+    .stats-tabs li {
+        display: block;
+        margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid rgba(13, 10, 11, 0.15);
+    }
 }
 
 .stats-tabs li:last-child {
@@ -3770,7 +3781,6 @@ article.blog-single .blog-content {
 
 .blog-content__main img {
     max-width: 1000px;
-    margin: 3rem 0 3rem -6rem;
 }
 
 
@@ -3942,7 +3952,7 @@ article.blog-single .blog-content {
     }
     .blog-content__main img {
         max-width: 900px;
-        margin: 3rem 0 3rem -5rem;
+        
     }
 }
 
@@ -3956,7 +3966,7 @@ article.blog-single .blog-content {
     }
     .blog-content__main img {
         max-width: 800px;
-        margin: 3rem 0 3rem -4rem;
+        
     }
     .blog-content__prev, .blog-content__next {
         width: 100%;
@@ -3974,7 +3984,7 @@ article.blog-single .blog-content {
     }
     .blog-content__main img {
         max-width: 100%;
-        margin: 3rem 0 3rem;
+        
     }
 }
 
@@ -4197,4 +4207,77 @@ article.blog-single .blog-content {
 .project-link {
     color: #FFFFFF;
     font-size: 1.6rem;
+}
+
+/* flip card 
+-----------------------------------*/
+
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000px;
+}
+    /* flip the pane when hovered */
+    .flip-container:hover .flipper, .flip-container.hover .flipper {
+        transform: rotateY(180deg);
+    }
+
+.flip-container, .front, .back {
+    width: 300px;
+    height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+}
+
+/* our team
+-----------------*/
+.credit {
+    background-color: #efefef;
+}
+.our-team {
+    display: block;
+    margin: 3rem auto 3rem auto;
+    width: 20rem;
+    height: 20rem;
+    box-shadow: 0 0 0 0.9rem rgba(0, 0, 0, 0.15);
+    border-radius: 100%;
+    left: .9rem;
+    top: 4.8rem;
+    outline: none;
+}
+
+.our-team-name {
+    font-family: "montserrat-medium", sans-serif;
+    color: #6c6c6c;
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 2rem;
+    text-align: center;
 }
