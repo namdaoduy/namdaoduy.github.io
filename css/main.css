@@ -36,7 +36,7 @@
  *      ## home animations
  *  # about
  *      ## timeline
- *  # works
+ *  # projects
  *      ## bricks/masonry
  *  # testimonials
  *  # blog
@@ -843,6 +843,13 @@ input[type="button"].btn--primary:focus {
 .btn.full-width, button.full-width {
     width: 100%;
     margin-right: 0;
+}
+
+.btn.custom, button.custom {
+    display: block;
+    width: 30rem;
+    margin: auto;
+    margin-top: 7rem;
 }
 
 .btn--medium, button.btn--medium {
@@ -2350,11 +2357,11 @@ html.no-csstransitions .home-content__main {
 
 
 /* ===================================================================
- * # works - (_site-layout.scss)
+ * # projects - (_site-layout.scss)
  *
  * ------------------------------------------------------------------- */
 
-.s-works {
+.s-projects {
     padding-top: 15rem;
     padding-bottom: 15.6rem;
     background-color: #f1f1f1;
@@ -2557,7 +2564,7 @@ html.no-csstransitions .home-content__main {
 
 /* ------------------------------------------------------------------- 
  * responsive:
- * works
+ * projects
  * ------------------------------------------------------------------- */
 
 @media only screen and (max-width: 1700px) {
@@ -3613,6 +3620,8 @@ article.blog-single .blog-content {
     color: white;
 }
 
+
+
 .page-header__title {
     color: #FFFFFF;
     position: relative;
@@ -3625,6 +3634,11 @@ article.blog-single .blog-content {
 
 .page-header__title a {
     color: #FFFFFF;
+}
+
+.page-header__title h3 {
+    color: #862121;
+    font-size: 3rem;
 }
 
 .page-header__meta {
@@ -4167,7 +4181,7 @@ article.blog-single .blog-content {
 }
 .easing-variables {
   display: inline-block;
-  transition: transform 1.5s var(--ease-out-quart);
+  transition: transform 1.5s var(--ease-in-out-quart);
 }
 .easing-variables img {
     margin-left: auto;
@@ -4180,7 +4194,7 @@ article.blog-single .blog-content {
 
 /* project link
  * ---------------------------- */
- .project-link {
+.project-link {
     color: #FFFFFF;
     font-size: 1.6rem;
- }
+}
